@@ -1,0 +1,276 @@
+/* Global */
+body {
+    margin: 0;
+    font-family: 'Heebo', sans-serif;
+}
+
+header {
+    padding: 10px 40px;
+}
+
+nav {
+    text-align:  right;
+}
+
+nav > a {
+    color: #000;
+    text-decoration: none;
+    margin-left: 43px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+
+.container{
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+h2{
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0;
+}
+section{
+    padding-top: 15px;
+}
+
+
+/* Profile Section */
+.profile{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.profile-body{
+    display: flex;
+    justify-content: space-between;
+}
+.profile-info {
+    width: 450px;
+}
+.profile-info > h1{
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.profile-info > p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.profile-info a{
+    margin-top: 10px;
+    display: inline-block;
+    background: #FF6464;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.profile-image img{
+    height: 243px;
+    width: auto;
+}
+
+
+/* Posts Section */
+.posts{
+    background-color: #EDF7FA;
+    
+}
+.row{
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.col{
+    flex: 1;
+    padding: 15px;
+}
+
+.posts-header{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.posts-header > a{
+    color: #000;
+    text-decoration: none;
+}
+
+.card {
+    background-color: #fff;
+    min-height: 100px;
+}
+
+.card-body{
+    padding: 23px;
+}
+
+.card-header{
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.card-details{
+    margin-bottom:15px;
+}
+
+.card-details > span{
+    margin-right: 15px;
+}
+
+.vl {
+    border: 1px solid #000;
+}
+
+
+/* Works Section */
+.work{
+    margin-top: 40px;
+}
+.work-body{
+    display: flex;
+}
+
+.work-image img{
+    height: auto;
+    width: 240px;
+}
+
+.work-details{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.work-title{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.badge{
+    background-color: #142850;
+    color: #fff;
+    padding: 0 10px;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.work-type{
+    color: #8695A4;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+/* Footer */
+footer{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-links{
+    display: flex;
+    width: 230px;
+    justify-content: space-between;
+}
+
+.social-links > a{
+    color: inherit;
+}
+
+#hamitems{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#hamitems a{
+    padding-left: 33px;
+    font: 20px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
+
+#hamnav label, #hamburger { display: none;}
+
+@media screen and (max-width: 800px) {
+
+    .profile-body {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .profile-info{
+        width:100%;
+        text-align: center;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+
+    .work-image img{
+        width: 100%;
+    }
+    .work-body{
+
+        flex-direction: column;
+    }
+
+    .container{
+        padding: 15px;
+    }
+
+    .profile{
+        margin-top: 0;
+    }
+
+    /* (A) BREAK INTO VERTICAL MENU */
+    #hamitems a {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin-top:15px;
+    }
+
+    /* (B) SHOW HAMBURGER ICON */
+    #hamnav label { 
+    display: flex; 
+    justify-content: flex-end;
+    margin-right: 10px;
+    font-style: normal;
+    font-size: 2em;
+    }
+
+    /* (C) TOGGLE SHOW/HIDE MENU */
+    #hamitems { display: none; }
+    #hamburger:checked ~ #hamitems { display: block;  }
+
+    /* (D) MENU POSITION */
+    header{
+        padding: 0;
+    }
+
+    #hamnav{
+        position: absolute;
+        width: 100%;
+        background: #fff;
+    }
+    .profile {
+        padding-top: 35px;
+    }
+}
